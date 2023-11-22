@@ -5,8 +5,6 @@ from pycaret.regression import setup, compare_models, pull, save_model, load_mod
 import pandas as pd
 import os 
 
-st.markdown(profile.to_html(), unsafe_allow_html=True)
-
 if os.path.exists('./dataset.csv'): 
     df = pd.read_csv('dataset.csv', index_col=None)
 
