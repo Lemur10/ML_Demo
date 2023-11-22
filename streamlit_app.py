@@ -1,7 +1,8 @@
 from operator import index
 import streamlit as st
 import plotly.express as px
-from pycaret.regression import setup, compare_models, pull, save_model, load_model
+from pycaret.regression import setup, compare_models, pull, save_model, load_model, 
+from pycaret.classification import *
 import pandas as pd
 import streamlit.components.v1 as components
 import os 
