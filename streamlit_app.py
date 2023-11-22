@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 from pycaret.regression import setup, compare_models, pull, save_model, load_model
 import pandas as pd
-from ydata_profiling import ProfileReport
+from pandas_profiling import ProfileReport
 import os 
 
 if os.path.exists('./dataset.csv'): 
@@ -26,7 +26,9 @@ if choice == "Upload":
 if choice == "Profiling": 
     st.title("Exploratory Data Analysis")
     profile_df = ProfileReport(df)
-    ProfileReport(profile_df)
+    st.write(profile_df)
+
+
 
 if choice == "Modelling": 
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
