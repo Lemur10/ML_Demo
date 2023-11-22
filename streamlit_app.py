@@ -27,8 +27,6 @@ if choice == "Profiling":
     profile_df = df.profile_report()
     profile_report(profile_df)
 
-#st.write(profile.html, unsafe_allow_html=True)
-
 if choice == "Modelling": 
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
     if st.button('Run Modelling'): 
