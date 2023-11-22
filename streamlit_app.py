@@ -86,7 +86,7 @@ if choice == "Profiling":
 if choice == "Modelling": 
     target = st.selectbox('Choose the Target Column', df.columns)
     if st.button('Run Modelling'): 
-        setup(df, target=target, silent=True)
+        setup(df, target=target)
         setup_df = pull()
         st.dataframe(setup_df)
         best_model = compare_models()
