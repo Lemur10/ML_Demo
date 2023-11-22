@@ -11,7 +11,7 @@ if os.path.exists('./dataset.csv'):
     df = pd.read_csv('dataset.csv', index_col=None)
 
 with st.sidebar: 
-    st.image("data.PNG")
+    st.image("data.PNG") 
     st.title("Automated Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
