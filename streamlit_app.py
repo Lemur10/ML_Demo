@@ -2,8 +2,9 @@ from operator import index
 import streamlit as st
 import plotly.express as px
 from pycaret.regression import setup, compare_models, pull, save_model, load_model
-import pandas as pd
 from pandas_profiling import ProfileReport
+import pandas as pd
+
 import os 
 
 if os.path.exists('./dataset.csv'): 
