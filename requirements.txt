@@ -2,5 +2,5 @@ streamlit
 plotly_express==0.4
 pycaret
 pandas
-pandas-profiling
+pandas_profiling
 streamlit-pandas-profiling
