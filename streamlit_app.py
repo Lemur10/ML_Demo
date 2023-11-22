@@ -15,7 +15,7 @@ with st.sidebar:
     st.title("Automated Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
-    st.info("This project application helps you build and explore your data.")
+    st.info("This project helps you to explore your data.")
 
 if choice == "Upload":
     st.title("Upload Your Dataset")
