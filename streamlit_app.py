@@ -26,7 +26,8 @@ if choice == "Upload":
 if choice == "Profiling": 
     st.title("Exploratory Data Analysis")
     profile_df = df.profile_report()
-    st_profile_report(profile_df)
+--    st_profile_report(profile_df)
+    st.write(profile.html, unsafe_allow_html=True)
 
 if choice == "Modelling": 
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
