@@ -48,7 +48,8 @@ if choice == "Profiling":
             st.markdown(table_markdown)
 
             numeric_cols = df.select_dtypes(include='number').columns.tolist()
-            st.write(numeric_cols)
+            formatted_cols = ', '.join(numeric_cols)
+            st.write(formatted_cols)
 
 
 
