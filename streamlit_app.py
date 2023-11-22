@@ -36,7 +36,7 @@ if choice == "Profiling":
             duplicate_row_count =  duplicates.shape[0]
          
             missing_value_row_count = df[df.isna().any(axis=1)].shape[0]
-         
+            placeholder = st.empty()
             table_markdown = f"""
               | Description | Value | 
               |---|---|
@@ -46,6 +46,7 @@ if choice == "Profiling":
               | Rows with Missing Values | {missing_value_row_count} |
               """
             st.markdown(table_markdown)
+            placeholder.empty() 
     
             st.write(' ')
             st.write(' ')    
