@@ -3,7 +3,6 @@ import streamlit as st
 import plotly.express as px
 from pycaret.regression import setup, compare_models, pull, save_model, load_model
 import pandas as pd
-import ProfileReport
 import os 
 
 if os.path.exists('./dataset.csv'): 
