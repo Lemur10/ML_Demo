@@ -18,7 +18,7 @@ with st.sidebar:
     st.info("This project helps you to explore your data.")
 
 if choice == "Upload":
-    st.title("Upload Your Dataset")
+    st.title("To Start, Upload Your Dataset in .csv Format")
     file = st.file_uploader("To Begin, Upload Your Dataset in .CSV Format")
     if file: 
         df = pd.read_csv(file, index_col=None)
