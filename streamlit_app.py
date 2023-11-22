@@ -28,7 +28,7 @@ if choice == "Upload":
 if choice == "Profiling": 
     st.title("Exploratory Data Analysis")
     profile_df = ProfileReport(df)
-    st.write(profile_df)
+    st.write(profile_df) 
 
 
 
