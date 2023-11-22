@@ -47,19 +47,7 @@ if choice == "Profiling":
               """
             st.markdown(table_markdown)
 
-            st.header("Columns Type")
-             
-            # get feature names
-            columns = list(df.columns)
-             
-            # create dataframe
-            column_info_table = pd.DataFrame({
-                  "column": columns,
-                  "data_type": df.dtypes.tolist()
-            })
-     
-# display pandas dataframe as a table
-st.dataframe(column_info_table, hide_index=True)
+            numeric_cols = df.select_dtypes(include='number').columns.tolist()
 
 
 
