@@ -11,7 +11,7 @@ if os.path.exists('./dataset.csv'):
     df = pd.read_csv('dataset.csv', index_col=None)
 
 with st.sidebar: 
-    st.image("data.PNG") 
+    st.image("matrix2.png") 
     st.title("Automated Quick & Dirty Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
@@ -26,6 +26,7 @@ if choice == "Upload":
         st.dataframe(df)
 
 if choice == "Profiling": 
+            placeholder=st.empty()
             # extract meta-data from the uploaded dataset
             st.header("Meta-data")
             row_count = df.shape[0]
@@ -46,7 +47,8 @@ if choice == "Profiling":
               | Rows with Missing Values | {missing_value_row_count} |
               """
             st.markdown(table_markdown)
-
+            placeholder.empty()
+    
             st.write(' ')
             st.write(' ')    
             st.write('Numeric columns: ')    
