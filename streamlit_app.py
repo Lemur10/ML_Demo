@@ -26,7 +26,6 @@ if choice == "Upload":
         st.dataframe(df)
 
 if choice == "Profiling": 
-            placeholder=st.empty()
             # extract meta-data from the uploaded dataset
             st.header("Meta-data")
             row_count = df.shape[0]
@@ -47,7 +46,6 @@ if choice == "Profiling":
               | Rows with Missing Values | {missing_value_row_count} |
               """
             st.markdown(table_markdown)
-            placeholder.empty()
     
             st.write(' ')
             st.write(' ')    
