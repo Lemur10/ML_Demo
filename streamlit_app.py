@@ -55,12 +55,12 @@ if choice == "Profiling":
             st.write(formatted_cols)
 
             numeric_cols = df.select_dtypes(include='number').columns.tolist()
-         
-            # add selection-box widget
-            selected_num_col = st.selectbox("Which numeric column do you want to explore?", numeric_cols)
 
-            st.header(f"{selected_num_col} - Statistics")
-                 
+            st.write(' ')    
+            st.write(' ')    
+            # add selection-box widget
+            selected_num_col = st.selectbox("Which numeric column do you want to look at in detail?", numeric_cols)  
+            st.header(f"{selected_num_col} - Statistics")   
             col_info = {}
             col_info["Unique Values"] = len(df[selected_num_col].unique())
             col_info["Rows with Missing Values"] = df[selected_num_col].isnull().sum()
