@@ -49,6 +49,7 @@ if choice == "Profiling":
 
             st.write(' ')
             st.write(' ')    
+            st.write('Numeric columns: ')    
             numeric_cols = df.select_dtypes(include='number').columns.tolist()
             formatted_cols = ', '.join(numeric_cols)
             st.write(formatted_cols)
