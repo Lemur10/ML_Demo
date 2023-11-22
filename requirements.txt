@@ -4,4 +4,4 @@ pycaret
 pandas
 pandas-profiling
 streamlit-pandas-profiling
-ydata_profiling
+ydata-profiling
