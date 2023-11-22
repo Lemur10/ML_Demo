@@ -40,10 +40,10 @@ if choice == "Profiling":
             table_markdown = f"""
               | Description | Value | 
               |---|---|
-              | Number of Rows | {row_count} |
-              | Number of Columns | {column_count} |
-              | Number of Duplicated Rows | {duplicate_row_count} |
-              | Number of Rows with Missing Values | {missing_value_row_count} |
+              | Rows | {row_count} |
+              | Columns | {column_count} |
+              | Duplicated Rows | {duplicate_row_count} |
+              | Rows with Missing Values | {missing_value_row_count} |
               """
             st.markdown(table_markdown)
 
