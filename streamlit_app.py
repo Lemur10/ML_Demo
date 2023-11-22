@@ -77,7 +77,9 @@ if choice == "Profiling":
             # display dataframe as a markdown table
             st.dataframe(info_df)
 
-
+            st.header("Histogram")
+            fig = px.histogram(df, x=selected_num_col)
+            st.plotly_chart(fig, use_container_width=True)
 
 
 
