@@ -22,7 +22,7 @@ if choice == "Upload":
     file = st.file_uploader("To Begin, Upload a .csv Dataset")
     if file: 
         df = pd.read_csv(file, index_col=None)
-        df.to_csv('dataset.csv', index=None)
+        df.to_csv('dataset.csv', index=None) 
         st.dataframe(df)
 
 if choice == "Profiling": 
