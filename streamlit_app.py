@@ -12,7 +12,7 @@ if os.path.exists('./dataset.csv'):
 
 with st.sidebar: 
     st.image("data.PNG") 
-    st.title("Automated Preliminary Data Exploration")
+    st.title("Automated Quick & Dirty Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
     st.info("This project helps you to explore your data.")
