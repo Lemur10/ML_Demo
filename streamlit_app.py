@@ -26,16 +26,39 @@ if choice == "Upload":
         st.dataframe(df)
 
 if choice == "Profiling": 
-    st.title("Exploratory Data Analysis")
-    profile_df = ProfileReport(df)
-    st.write(profile_df) 
+        with table1:
+          if file:
+            # extract meta-data from the uploaded dataset
+            st.header("Meta-data")
+            row_count = df.shape[0]
+            column_count = df.shape[1]
+             
+            # Use the duplicated() function to identify duplicate rows
+            duplicates = df[df.duplicated()]
+            duplicate_row_count =  duplicates.shape[0]
+         
+            missing_value_row_count = df[df.isna().any(axis=1)].shape[0]
+         
+            table_markdown = f"""
+              | Description | Value | 
+              |---|---|
+              | Number of Rows | {row_count} |
+              | Number of Columns | {column_count} |
+              | Number of Duplicated Rows | {duplicate_row_count} |
+              | Number of Rows with Missing Values | {missing_value_row_count} |
+              """
+            st.markdown(table_markdown)
+
+
+
+
 
 
 
 if choice == "Modelling": 
-    chosen_target = st.selectbox('Choose the Target Column', df.columns)
+    target = st.selectbox('Choose the Target Column', df.columns)
     if st.button('Run Modelling'): 
-        setup(df, target=chosen_target, silent=True)
+        setup(df, target=target, silent=True)
         setup_df = pull()
         st.dataframe(setup_df)
         best_model = compare_models()
