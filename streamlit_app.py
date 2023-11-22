@@ -24,7 +24,7 @@ if choice == "Upload":
 
 if choice == "Profiling": 
     st.title("Exploratory Data Analysis")
-    profile_df = df.profile_report()
+    profile_df = profile_report(df)
     st_profile_report(profile_df)
 
 if choice == "Modelling": 
