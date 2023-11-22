@@ -26,7 +26,6 @@ if choice == "Upload":
         st.dataframe(df)
 
 if choice == "Profiling": 
-          if file:
             # extract meta-data from the uploaded dataset
             st.header("Meta-data")
             row_count = df.shape[0]
