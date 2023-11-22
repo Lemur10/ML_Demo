@@ -19,7 +19,7 @@ with st.sidebar:
 
 if choice == "Upload":
     st.title("To Start, Upload Your Dataset in .csv Format")
-    file = st.file_uploader("To Begin, Upload Your Dataset in .CSV Format")
+    file = st.file_uploader("To Begin, Upload a .csv Dataset")
     if file: 
         df = pd.read_csv(file, index_col=None)
         df.to_csv('dataset.csv', index=None)
