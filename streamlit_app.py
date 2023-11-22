@@ -14,7 +14,7 @@ with st.sidebar:
     st.image("data.PNG")
     st.title("Automated Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
-    st.write("After you upload, click on "profiling" for data profile")
+    st.write("After you upload, click on profiling for data profile")
     st.info("This project application helps you build and explore your data.")
 
 if choice == "Upload":
