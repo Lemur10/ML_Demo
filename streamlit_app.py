@@ -25,6 +25,11 @@ if choice == "Upload":
         df.to_csv('dataset.csv', index=None) 
         st.dataframe(df)
 
+        url = "https://www.streamlit.io"
+        st.write("If you want, here is a demo .csv file [link](%s)" % url)
+        #st.markdown("If you want, here is a demo .csv file [link](%s)" % url)
+
+
 if choice == "Profiling": 
             # extract meta-data from the uploaded dataset
             st.header("Meta-data")
