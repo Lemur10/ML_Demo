@@ -22,7 +22,7 @@ if choice == "Upload":
     url = "https://www.streamlit.io"
 
     file = st.file_uploader("To Begin, Upload a .csv Dataset")
-    st.write("If needed, here is a demo .csv file [link](%s)" % url)
+    st.write("If you don't have one handy, here is a demo .csv file [link](%s)" % url)
     st.write("Just save the .csv file and then drag and drop it here.")
 
     if file: 
