@@ -3,4 +3,4 @@ plotly_express==0.4
 pycaret
 pandas
 DataPrep
-Seaborn
+seaborn
