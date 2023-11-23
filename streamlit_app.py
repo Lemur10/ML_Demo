@@ -5,6 +5,7 @@ from pycaret.regression import setup, compare_models, pull, save_model, load_mod
 from pycaret.classification import *
 import pandas as pd
 import streamlit.components.v1 as components
+import seaborn as sns
 import os 
 
 if os.path.exists('./dataset.csv'): 
@@ -81,7 +82,10 @@ if choice == "Profiling":
             col_info["Median"] = df[selected_num_col].median()
              
             info_df = pd.DataFrame(list(col_info.items()), columns=['Description', 'Value'])
-             
+
+            tips = sns.load_dataset(selected_num_col)
+            sns.swarmplot(data=selected_num_col, x="")
+    
             # display dataframe as a markdown table
             st.dataframe(info_df)
 
