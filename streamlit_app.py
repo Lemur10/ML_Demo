@@ -19,14 +19,15 @@ with st.sidebar:
 
 if choice == "Upload":
     st.title("Please start by uploading a .csv Dataset")
+    url = "https://www.streamlit.io"
+    st.write("If you want, here is a demo .csv file [link](%s)" % url)
+    st.markdown("If you want, here is a demo .csv file [link](%s)" % url)
     file = st.file_uploader("To Begin, Upload a .csv Dataset")
     if file: 
         df = pd.read_csv(file, index_col=None)
         df.to_csv('dataset.csv', index=None) 
         st.dataframe(df)
-        url = "https://www.streamlit.io"
-        st.write("If you want, here is a demo .csv file [link](%s)" % url)
-        #st.markdown("If you want, here is a demo .csv file [link](%s)" % url)
+
 
 
 if choice == "Profiling": 
