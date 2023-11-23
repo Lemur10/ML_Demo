@@ -23,6 +23,7 @@ if choice == "Upload":
 
     file = st.file_uploader("To Begin, Upload a .csv Dataset")
     st.write("If needed, here is a demo .csv file [link](%s)" % url)
+    st.write("Just save the .csv file and then drag and drop it here.")
 
     if file: 
         df = pd.read_csv(file, index_col=None)
