@@ -6,7 +6,6 @@ from pycaret.classification import *
 import pandas as pd
 import streamlit.components.v1 as components
 import os 
-import seaborn as sns
 
 st.markdown("""
 <style>
