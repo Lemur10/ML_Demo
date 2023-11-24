@@ -7,6 +7,14 @@ import pandas as pd
 import streamlit.components.v1 as components
 import os 
 
+st.markdown("""
+<style>
+.big-font {
+    font-size:15px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 if os.path.exists('./dataset.csv'): 
     df = pd.read_csv('dataset.csv', index_col=None)
 
@@ -15,7 +23,7 @@ with st.sidebar:
     st.title("Automated Quick & Dirty Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
-    st.write("**About**")
+    st.markdown('<p class="About"</p>',  unsafe_allow_html=True)
     st.info("This project helps you to explore your data.")
 
 if choice == "Upload":
