@@ -23,7 +23,8 @@ with st.sidebar:
     st.title("Automated Quick & Dirty Preliminary Data Exploration")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.write("After you upload, click on profiling for data profile")
-    st.write('<p class="About"</p>',  unsafe_allow_html=True)
+    new_title = '<p style="font-family:sans-serif; color:Blue; font-size: 20px;">About</p>'
+    st.markdown(new_title, unsafe_allow_html=True)
     st.info("This project helps you to explore your data.")
 
 if choice == "Upload":
