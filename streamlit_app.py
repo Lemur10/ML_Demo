@@ -5,7 +5,6 @@ from pycaret.regression import setup, compare_models, pull, save_model, load_mod
 from pycaret.classification import *
 import pandas as pd
 import streamlit.components.v1 as components
-import Bokeh
 import os 
 
 if os.path.exists('./dataset.csv'): 
