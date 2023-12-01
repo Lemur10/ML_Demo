@@ -14,7 +14,7 @@ with st.sidebar:
     st.image("matrix2.png")
     st.title("Automated Profile and ML")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
-    st.info("This project application helps you explore your data.  As it is Auto generated, it is a very cursory look at things.")
+    st.info("This app helps you quickly explore your data.  As it is Auto generated, it is a very cursory look at things.")
 
 if choice == "Upload":
     st.title("To profile, ")
