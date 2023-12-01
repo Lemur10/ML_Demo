@@ -17,7 +17,7 @@ with st.sidebar:
     st.info("This project application helps you explore your data.  As it is Auto generated, it is a very cursory look at things.")
 
 if choice == "Upload":
-    st.title("To profile data, first Upload Your Dataset")
+    st.title("To profile, <br>Upload Your Dataset")
     file = st.file_uploader("Upload Your Dataset")
     if file: 
         df = pd.read_csv(file, index_col=None)
