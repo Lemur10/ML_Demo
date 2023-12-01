@@ -3,3 +3,4 @@ seaborn
 plotly_express==0.4
 pycaret
 pandas
+pandas_profiling 
