@@ -11,7 +11,7 @@ if os.path.exists('./dataset.csv'):
     df = pd.read_csv('dataset.csv', index_col=None)
 
 with st.sidebar: 
-    st.image(matrix2.png")
+    st.image("matrix2.png")
     st.title("Automated Profile and ML")
     choice = st.radio("Navigation", ["Upload","Profiling","Modelling", "Download"])
     st.info("This project application helps you explore your data.  As it is Auto generated, it is a very cursory look at things.")
