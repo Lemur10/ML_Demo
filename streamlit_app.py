@@ -23,7 +23,7 @@ if choice == "Upload":
     if file: 
         df = pd.read_csv(file, index_col=None)
         df.to_csv('dataset.csv', index=None)
-        st.dataframe(df["dataframe_column"].astype(int))
+
 
 if choice == "Profiling": 
     st.title("Exploratory Data Analysis")
@@ -35,8 +35,8 @@ if choice == "Modelling":
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
     if st.button('Run Modelling'): 
         setup(df, target=chosen_target)
-        setup_df = pull()
-        st.write(setup_df)
+        setup_df=st.dataframe(df["dataframe_column"].astype(int))
+
 
 if choice == "Download": 
     with open('best_model.pkl', 'rb') as f: 
