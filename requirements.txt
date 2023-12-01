@@ -3,5 +3,5 @@ plotly_express==0.4
 pycaret
 pandas
 joblib==1.1.1
-pandas_profiling
+ydata-profiling
 streamlit_pandas_profiling
