@@ -36,6 +36,7 @@ if choice == "Modelling":
     if st.button('Run Modelling'): 
         setup(df, target=chosen_target)
         setup_df = pull()
+        st.write(setup_df)
 
 if choice == "Download": 
     with open('best_model.pkl', 'rb') as f: 
