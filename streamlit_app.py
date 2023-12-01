@@ -29,17 +29,14 @@ if choice == "Profiling":
     st.title("Exploratory Data Analysis")
     profile_df = df.profile_report()
     st_profile_report(profile_df)
+    
 
 if choice == "Modelling": 
     chosen_target = st.selectbox('Choose the Target Column', df.columns)
     if st.button('Run Modelling'): 
         setup(df, target=chosen_target)
         setup_df = pull()
-        st.dataframe(setup_df)
-        best_model = compare_models()
-        compare_df = pull()
-        st.dataframe(compare_df)
-        save_model(best_model, 'best_model')
+        st.write(setup_df)
 
 if choice == "Download": 
     with open('best_model.pkl', 'rb') as f: 
