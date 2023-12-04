@@ -4,5 +4,3 @@ pycaret
 pandas
 joblib==1.1.1
 ydata-profiling
-streamlit_pandas_profiling
-scikit-learn
